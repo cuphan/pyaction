@@ -6,10 +6,16 @@ name: Python application
 on:
   push:
     branches: [ main ]
+
   pull_request:
     branches: [ main ]
+
   # run manually
   workflow_dispatch:
+  
+  # runs our tests every Sunday at midnight.
+  #schedule:
+  #  - cron:  '0 0 * * 0'
 
 jobs:
   build:
